@@ -1,5 +1,5 @@
 import React from 'react';
-import AppSidebar from '../components/AppSidebar';
+import AppSidebar from '../../components/AppSidebar';
 
 export default function Abonnement() {
   return (

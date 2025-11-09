@@ -28,11 +28,11 @@ export default function AppSidebar() {
       </div>
 
       <nav className="space-y-1">
-        <Link to="/" className={linkClass('/')}>Accueil</Link>
+        {/* <Link to="/" className={linkClass('/')}>Accueil</Link>
         <Link to="/catalogue" className={linkClass('/catalogue')}>Catalogue</Link>
         <Link to="/recherche" className={linkClass('/recherche')}>Recherche</Link>
         <Link to="/a-propos" className={linkClass('/a-propos')}>À propos</Link>
-        <Link to="/contact" className={linkClass('/contact')}>Contact</Link>
+        <Link to="/contact" className={linkClass('/contact')}>Contact</Link> */}
 
         <div className="mt-4 pt-4 border-t border-gray-100">
           <h3 className="text-sm font-semibold text-gray-600 mb-2">Espace Lecteur</h3>

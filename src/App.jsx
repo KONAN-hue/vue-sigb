@@ -12,10 +12,10 @@ import Recherche from "./pages/Recherche";
 import APropos from "./pages/APropos";
 import Contact from "./pages/Contact";
 
-import MesLivres from "./pages/MesLivres";
-import Abonnement from "./pages/Abonnement";
-import Paiements from "./pages/Paiements";
-import Evaluations from "./pages/Evaluations";
+import MesLivres from "./pages/lecteur/MesLivres";
+import Abonnement from "./pages/lecteur/Abonnement";
+import Paiements from "./pages/lecteur/Paiements";
+import Evaluations from "./pages/lecteur/Evaluations";
 
 import AdminLivres from "./pages/AdminLivres";
 import AdminReservations from "./pages/AdminReservations";

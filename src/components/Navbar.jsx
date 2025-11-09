@@ -28,12 +28,17 @@ export default function Navbar() {
         ? 'bg-white/95 backdrop-blur-sm shadow-md' 
         : 'bg-white shadow-md'
     }`}>
-      <Link to="/" className="text-xl font-bold text-[oklch(52.7%_0.154_150.069)] hover:text-[oklch(39.3%_0.095_152.535)]">SIGB</Link>
+      <Link 
+        to={user?.isLoggedIn && user.role === "Lecteur" ? "/mes-livres" : "/"}
+        className="text-xl font-bold text-[oklch(52.7%_0.154_150.069)] hover:text-[oklch(39.3%_0.095_152.535)]"
+      >
+        SIGB
+      </Link>
 
       <ul className="flex space-x-4 items-center">
-        {user?.isLoggedIn && (
+        {user?.isLoggedIn && user.role === "Lecteur" && (
           <>
-            <li><Link to="/" className="text-[oklch(52.7%_0.154_150.069)] hover:text-[oklch(39.3%_0.095_152.535)]">Accueil</Link></li>
+            <li><Link to="/mes-livres" className="text-[oklch(52.7%_0.154_150.069)] hover:text-[oklch(39.3%_0.095_152.535)]">Accueil</Link></li>
             <li><Link to="/catalogue" className="text-[oklch(52.7%_0.154_150.069)] hover:text-[oklch(39.3%_0.095_152.535)]">Catalogue</Link></li>
           </>
         )}
@@ -45,7 +50,7 @@ export default function Navbar() {
           </>
         )}
 
-        {(user?.role === "bibliothecaire" || user?.role === 'admin') && (
+        {(user?.role === "Bibliothecaire" || user?.role === 'Admin') && (
           <li><Link to="/admin/dashboard" className="text-[oklch(52.7%_0.154_150.069)] hover:text-[oklch(39.3%_0.095_152.535)]">Administration</Link></li>
         )}
 
