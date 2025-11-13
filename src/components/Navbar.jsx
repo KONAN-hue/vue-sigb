@@ -49,7 +49,21 @@ export default function Navbar() {
       </Link>
 
       {isMobile ? (
-        <NavigationToggle />
+        <>
+          <NavigationToggle />
+          {/* <ul className="flex space-x-4 items-center">
+            {navigationLinks.map(link => (
+              <li key={link.path}>
+                <Link 
+                  to={link.path} 
+                  className="text-[oklch(52.7%_0.154_150.069)] hover:text-[oklch(39.3%_0.095_152.535)]"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+            </ul> */}
+          </>
       ) : (
         <ul className="flex space-x-4 items-center">
           {navigationLinks.map(link => (
